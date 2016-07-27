@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firebase Race</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+   <link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '872846886154556',
+          xfbml      : true,
+          version    : 'v2.7'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <meta charset="utf-8">
+    <title>Firebase México</title>
+    
+  </head>
+  <body>
+   
+     <div id="container">
+        <button onclick="signOut()">salir</button>
+        <button id="startGameBtn" onclick="startGame()">StartGame</button>
+        <img  id="userPhoto" alt="" data-pin-nopin="true">
+        <h1>Bienvenido <span id="userName"></span></h1>
+        <button id="logInBtn" type="button" name="button">Loggeate</button>
+        <button id="plusOne">Press Me</button>
+        <h2>Player Board</h2>
+        <div id="playerBoard">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
